@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Heist Creator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" class="hidden">
+    <header><div><span class="eyebrow">ADMIN OPERATIONS</span><h1>Heist Creator</h1></div><button id="close" class="icon" title="Close">×</button></header>
+    <section class="layout">
+      <aside><div class="aside-head"><h2>Heists</h2><button id="new" class="primary">+ New</button></div><div id="heist-list"></div></aside>
+      <section class="editor"><div class="editor-head"><div><span class="eyebrow" id="mode">NEW OPERATION</span><h2 id="editor-title">Create a heist</h2></div><div class="actions"><button id="test" class="secondary">▶ Test</button><button id="delete" class="danger">Delete</button><button id="save" class="primary">Save</button></div></div><div id="notice"></div>
+        <form id="form"><div class="grid"><label>Name<input id="name" maxlength="64" required></label><label>Minimum police<input id="minCops" type="number" min="0" max="100" value="0"></label><label>Maximum participants<input id="maxParticipants" type="number" min="1" max="8" value="1"></label><label class="wide">Description<textarea id="description" maxlength="500"></textarea></label><label>Cooldown (seconds)<input id="cooldown" type="number" min="0" max="604800" value="3600"></label><div class="position"><strong>Entry position</strong><div class="coords"><input id="entryX" placeholder="X"><input id="entryY" placeholder="Y"><input id="entryZ" placeholder="Z"></div><button type="button" class="secondary locate" data-target="entry">Use current position</button></div></div>
+          <div class="section-head"><h3>Objectives</h3><button type="button" id="add-objective" class="secondary">+ Add objective</button></div><div id="objectives"></div>
+          <div class="section-head"><h3>Rewards</h3><button type="button" id="add-reward" class="secondary">+ Add reward</button></div><div id="rewards"></div>
+        </form>
+      </section>
+    </section>
+  </main><script src="app.js"></script>
+</body>
+</html>
